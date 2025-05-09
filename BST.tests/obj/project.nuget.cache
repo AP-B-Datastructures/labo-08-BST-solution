@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ayTgqvUpQd8=",
+  "dgSpecHash": "d1D9/P3nUR8=",
   "success": true,
-  "projectFilePath": "/workspaces/labo-08-BST/BST.tests/BST.tests.csproj",
+  "projectFilePath": "/workspaces/labo-08-BST-solution/BST.tests/BST.tests.csproj",
   "expectedPackageFiles": [
     "/home/vscode/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/home/vscode/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",

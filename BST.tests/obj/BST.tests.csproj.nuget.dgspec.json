@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/labo-08-BST/BST.tests/BST.tests.csproj": {}
+    "/workspaces/labo-08-BST-solution/BST.tests/BST.tests.csproj": {}
   },
   "projects": {
-    "/workspaces/labo-08-BST/BST.tests/BST.tests.csproj": {
+    "/workspaces/labo-08-BST-solution/BST.tests/BST.tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/labo-08-BST/BST.tests/BST.tests.csproj",
+        "projectUniqueName": "/workspaces/labo-08-BST-solution/BST.tests/BST.tests.csproj",
         "projectName": "BST.tests",
-        "projectPath": "/workspaces/labo-08-BST/BST.tests/BST.tests.csproj",
+        "projectPath": "/workspaces/labo-08-BST-solution/BST.tests/BST.tests.csproj",
         "packagesPath": "/home/vscode/.nuget/packages/",
-        "outputPath": "/workspaces/labo-08-BST/BST.tests/obj/",
+        "outputPath": "/workspaces/labo-08-BST-solution/BST.tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vscode/.nuget/NuGet/NuGet.Config"
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/labo-08-BST/BST/BST.csproj",
+      "projectUniqueName": "/workspaces/labo-08-BST-solution/BST/BST.csproj",
       "projectName": "BST",
-      "projectPath": "/workspaces/labo-08-BST/BST/BST.csproj",
+      "projectPath": "/workspaces/labo-08-BST-solution/BST/BST.csproj",
       "packagesPath": "/home/vscode/.nuget/packages/",
-      "outputPath": "/workspaces/labo-08-BST/BST/obj/",
+      "outputPath": "/workspaces/labo-08-BST-solution/BST/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/vscode/.nuget/NuGet/NuGet.Config"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
