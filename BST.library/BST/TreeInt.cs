@@ -4,18 +4,57 @@ namespace bst_linkedlist.library.BST;
 
 public class TreeInt
 {
-    public NodeInt Root { get; set; }
-    public int Count => throw new NotImplementedException();
-    public int Height => throw new NotImplementedException();
+    public NodeInt Root { get; private set; }
 
-    public void Insert(int value)
+    public int Count
     {
-        throw new NotImplementedException();
+        get
+        {
+            return CountNodes(Root);
+        }
+    }
+
+    public NodeInt Insert(int value)
+    {
+        if (Root is null)
+        {
+            Root = new NodeInt(value);
+            return Root;
+        }
+        else
+        {
+            var node = FindNode(Root, value);
+            if (node.Value == value)
+            {
+                return node;
+            }
+
+            if (value < node.Value)
+            {
+                node.Left = new NodeInt(value);
+                return node.Left;
+            }
+            else
+            {
+                node.Right = new NodeInt(value);
+                return node.Right;
+            }
+        }
     }
 
     public bool Contains(int value)
     {
-        throw new NotImplementedException();
+        return FindNode(value) != null;
+    }
+
+    public NodeInt FindNode(int value)
+    {
+        var node = FindNode(Root, value);
+        if (node != null && node.Value == value)
+            return node;
+        else
+            return null;
+
     }
 
     public int Remove(int value)
@@ -24,14 +63,35 @@ public class TreeInt
         return value;
     }
 
-    public NodeInt Find(int value)
-    {
-        throw new NotImplementedException();
-    }
-
     public void Clear()
     {
-        throw new NotImplementedException();
+        Root = null;
+    }
+
+    public int Lowest()
+    {
+        int min = int.MinValue;
+        var node = Root;
+        if (node == null)
+            throw new Exception("BST is empty");
+
+        while (node != null)
+        {
+            min = node.Value;
+            //we go down the tree on the left side all the way
+            node = node.Left;
+        }
+        return min;
+    }
+
+    public int LowestRecursive()
+    {
+        return Lowest(Root);
+    }
+
+    public int Height()
+    {
+        return Height(Root);
     }
 
     private NodeInt Remove(NodeInt root, int value)
@@ -70,5 +130,49 @@ public class TreeInt
         if (root.Left != null)
             return FindMinValue(root.Left);
         return root.Value;
+    }
+
+    private NodeInt FindNode(NodeInt parent, int value)
+    {
+        NodeInt temp;
+
+        if (parent == null)
+            return parent;
+
+        if (parent.Value == value)
+            temp = parent;
+        else if (parent.Value > value)
+            temp = FindNode(parent.Left, value);
+        else
+            temp = FindNode(parent.Right, value);
+
+        return (temp == null ? parent : temp);
+    }
+
+    private int Height(NodeInt node)
+    {
+        if (node == null)
+            return 0;
+        //The height is calculated by calculating the height of the left and right side
+        //and take the largest of the 2
+        return 1 + Math.Max(Height(node.Left), Height(node.Right));
+    }
+
+    private int CountNodes(NodeInt node)
+    {
+        if (node == null)
+            return 0;
+        //The number of elements is calculated by summing the left side + the right side
+        return 1 + CountNodes(node.Left) + CountNodes(node.Right);
+    }
+
+    private int Lowest(NodeInt node)
+    {
+        if (node == null)
+            return 0;
+        if (node.Left != null)
+            return Lowest(node.Left);
+        else
+            return node.Value;
     }
 }
